@@ -21,5 +21,9 @@ VCR.use_cassette('courses') do
       courses_urls = sc.course_url
       courses_urls.sort.must_equal URLS_LIST.sort
     end
+    it 'should return an array include date' do
+      courses_dates = sc.course_date
+      courses_dates.sort.must_equal COURSES_DATE.sort
+    end
   end
 end
